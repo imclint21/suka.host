@@ -1,0 +1,9 @@
+@{
+	Layout = "_Layout";
+}
+<div class="h-screen bg-[#121826] text-white p-5 space-y-4">
+	<h1 class="text-4xl font-semibold">Upload to Suka.host</h1>
+	<p class="font-medium text-lg">This is how to use <code>suka.host</code> by using cURL.</p>
+	<div class="whitespace-pre-wrap font-mono">curl --upload-file ./hello.txt https://suka.host</div>
+	<div class="whitespace-pre-wrap font-mono">curl -F'file=@@hello.txt' https://suka.host</div>
+</div>

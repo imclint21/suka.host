@@ -4,14 +4,14 @@ using Suka.Services;
 namespace Suka.Controllers;
 
 [Route("")]
-public class SukaController : ControllerBase
+public class SukaController : Controller
 {
 	private readonly SukaService _sukaService;
 
 	public SukaController(SukaService sukaService) => _sukaService = sukaService;
 
-	// [HttpGet("dump")]
-	// public IEnumerable<HostedFile> Dump() => _suka.Dump();
+	[HttpGet("")]
+	public ActionResult Index() => View();
 
 	[HttpGet("{filename}")]
 	public ActionResult HttpGet(string filename)
