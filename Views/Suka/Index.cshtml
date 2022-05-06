@@ -1,9 +1,19 @@
 @{
+	ViewBag.Title = "Suka.host | Upload file using cURL";
 	Layout = "_Layout";
 }
-<div class="h-screen bg-[#121826] text-white p-5 space-y-4">
-	<h1 class="text-4xl font-semibold">Upload to Suka.host</h1>
-	<p class="font-medium text-lg">This is how to use <code>suka.host</code> by using cURL.</p>
-	<div class="whitespace-pre-wrap font-mono">curl --upload-file ./hello.txt https://suka.host</div>
-	<div class="whitespace-pre-wrap font-mono">curl -F'file=@@hello.txt' https://suka.host</div>
+<div class="flex justify-center items-center flex-col h-screen bg-[#121826] text-white p-5 space-y-4">
+	<div class="space-y-4">
+		<div class="whitespace-pre font-mono text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+                  888                   888                        888    
+                  888                   888                        888    
+                  888                   888                        888    
+.d8888b  888  888 888  888  8888b.      88888b.   .d88b.  .d8888b  888888 
+88K      888  888 888 .88P     "88b     888 "88b d88""88b 88K      888    
+"Y8888b. 888  888 888888K  .d888888     888  888 888  888 "Y8888b. 888    
+     X88 Y88b 888 888 "88b 888  888 d8b 888  888 Y88..88P      X88 Y88b.  
+?88888P'  "Y88888 888  888 "Y888888 Y8P 888  888  "Y88P"   88888P'  "Y888 
+		</div>
+		<div class="font-mono text-lg"><span class="text-gray-400 select-none">root@suka.host$</span> curl --upload-file ./hello.txt https://suka.host</div>
+	</div>
 </div>
