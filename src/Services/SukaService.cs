@@ -23,7 +23,17 @@ public class SukaService
 		await File.WriteAllBytesAsync(temporaryFile, bytes);
 		
 		var contentType = GetContentType(request, @catch);
-		
+
+		string? extension;
+		try
+		{
+			extension = MimeTypeMap.GetExtension(contentType);
+		}
+		catch
+		{
+			extension = string.Empty;
+		}
+
 		// Create `HostedFile` model
 		var hostedFile = new HostedFile
 		{
@@ -31,7 +41,7 @@ public class SukaService
 			CreationDateTime = DateTime.UtcNow,
 			TemporaryFile = temporaryFile,
 			ContentType = contentType,
-			Extension = MimeTypeMap.GetExtension(contentType)
+			Extension = extension
 		};
 
 		// Add the new file into the list
